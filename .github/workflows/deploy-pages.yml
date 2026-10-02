@@ -26,7 +26,7 @@ jobs:
         with:
           version: 11.19.0
           runtime: node@22
-          frozen-lockfile: true
+          require-lockfile: true
 
       - name: Test
         run: pnpm test
