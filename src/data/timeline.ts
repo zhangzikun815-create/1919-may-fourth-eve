@@ -1,0 +1,132 @@
+import type { TimelineEvent, TimelinePrelude } from "../types";
+
+export const timelinePrelude: TimelinePrelude = {
+  april: { year: "1919", month: "APRIL" },
+  paris: {
+    location: "巴黎",
+    subject: "山东问题",
+    message: "和会传来消息……",
+    sourceIds: ["06", "07"],
+  },
+  alert: {
+    date: "1919\n05 / 02",
+    title: "《外交警报敬告国人》",
+    person: "林长民",
+    description: "巴黎和会有关山东问题的消息传入北京。",
+    sourceIds: ["05", "07"],
+  },
+  meetingSteps: ["北京大学", "学生会议", "5月3日晚", "决定次日举行示威"],
+  mayFourth: {
+    year: "1919",
+    month: "05",
+    day: "04",
+    location: "北京",
+    caption: "历史开始流动。",
+  },
+};
+
+export const timelineEvents: TimelineEvent[] = [
+  {
+    id: "paris-conference",
+    date: "1919\n01 / 18",
+    location: "巴黎",
+    title: "巴黎和会召开",
+    description: [
+      "第一次世界大战结束后，战胜国在巴黎召开和平会议。",
+      "中国作为战胜国之一派代表参会，希望解决包括山东权益在内的问题。",
+    ],
+    keywords: ["巴黎", "山东", "外交"],
+    sourceIds: ["06"],
+  },
+  {
+    id: "shandong-question",
+    date: "1919\n04 / 29—30",
+    title: "山东问题",
+    description: [
+      "巴黎和会围绕山东问题作出相关决定，",
+      "中国国内随后得知外交交涉受挫的消息。",
+    ],
+    sourceIds: ["06", "07"],
+    visual: "shandong",
+  },
+  {
+    id: "diplomatic-warning",
+    date: "1919\n05 / 02",
+    location: "北京",
+    title: "外交警报",
+    description: ["林长民在《晨报》发表《外交警报敬告国人》。", "消息迅速传播。"],
+    sourceIds: ["05", "07"],
+    visual: "warning",
+  },
+  {
+    id: "student-meeting",
+    date: "1919\n05 / 03",
+    location: "北京大学",
+    title: "学生会议",
+    description: [
+      "北京大学学生召开会议，其他学校学生代表参加。",
+      "会议决定次日举行学生示威活动。",
+    ],
+    sourceIds: ["07"],
+  },
+  {
+    id: "may-fourth",
+    date: "1919\n05 / 04",
+    location: "BEIJING",
+    title: "五四运动爆发",
+    description: [
+      "北京十余所学校的3000余名学生，",
+      "在天安门前集会并举行示威游行。",
+    ],
+    keywords: ["十余所学校", "3000余名学生", "32人被捕"],
+    sourceIds: ["05", "07", "08"],
+    visual: "crowd",
+  },
+  {
+    id: "student-strike",
+    date: "1919\n05 / 05",
+    location: "北京",
+    title: "学生罢课",
+    description: ["北京学生开始罢课，并通电全国。", "各地学生陆续响应。"],
+    keywords: ["北京", "天津", "上海", "南京", "武汉", "济南"],
+    sourceIds: ["05", "08"],
+    visual: "spread",
+  },
+  {
+    id: "street-speeches",
+    date: "1919\n06 / 03—04",
+    title: "街头演讲与大规模逮捕",
+    description: ["北京学生走上街头进行宣传演讲。", "大量学生遭到逮捕。"],
+    sourceIds: ["05"],
+    visual: "arrests",
+  },
+  {
+    id: "movement-expands",
+    date: "1919\n06 / 05",
+    location: "上海",
+    title: "运动扩大",
+    description: ["上海工人开始罢工声援学生，商人罢市。", "运动参与主体进一步扩大。"],
+    sourceIds: ["05", "08"],
+    visual: "participants",
+  },
+  {
+    id: "situation-changes",
+    date: "1919\n06 / 10",
+    title: "局势发生变化",
+    description: [
+      "在社会压力之下，曹汝霖、章宗祥、陆宗舆等相关官员相继离任。",
+    ],
+    keywords: ["曹汝霖", "章宗祥", "陆宗舆"],
+    sourceIds: ["05"],
+    visual: "officials",
+  },
+  {
+    id: "treaty-refusal",
+    date: "1919\n06 / 28",
+    location: "PARIS",
+    title: "中国代表团\n没有在《巴黎和约》上签字",
+    description: ["从北京街头开始的声音，抵达了巴黎。", "—— 网页叙事语"],
+    sourceIds: ["06", "08"],
+    visual: "paris",
+  },
+];

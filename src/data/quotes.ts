@@ -1,0 +1,46 @@
+import type { Quote } from "../types";
+
+export const quotes: Quote[] = [
+  {
+    id: "chen-duxiu",
+    year: "1915",
+    location: "上海",
+    person: "陈独秀",
+    work: "《敬告青年》",
+    text: ["自主的而非奴隶的，", "进步的而非保守的。"],
+    publication: "《青年杂志》创刊号 · 1915",
+    side: "left",
+    sourceIds: ["01"],
+  },
+  {
+    id: "li-dazhao",
+    year: "1916",
+    person: "李大钊",
+    work: "《青春》",
+    text: ["以青春之我，", "创建青春之国家。"],
+    publication: "《新青年》 · 1916",
+    side: "right",
+    sourceIds: ["02"],
+  },
+  {
+    id: "hu-shi",
+    year: "1917",
+    person: "胡适",
+    work: "《文学改良刍议》",
+    text: ["须言之有物；", "不摹仿古人。"],
+    publication: "《新青年》 · 1917",
+    side: "left",
+    sourceIds: ["03"],
+  },
+  {
+    id: "lu-xun",
+    year: "1918",
+    person: "鲁迅",
+    work: "《狂人日记》",
+    text: ["救救孩子……"],
+    publication: "《新青年》 · 1918",
+    side: "right",
+    sourceIds: ["04"],
+    variant: "pause",
+  },
+];

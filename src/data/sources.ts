@@ -1,0 +1,66 @@
+import type { SourceItem } from "../types";
+
+export const sources: SourceItem[] = [
+  {
+    id: "01",
+    author: "陈独秀",
+    title: "《敬告青年》",
+    publication: "《青年杂志》创刊号",
+    year: "1915",
+    note: "引文采用原文中的青年六项标准节选。",
+    url: "https://zh.wikisource.org/wiki/敬告青年",
+  },
+  {
+    id: "02",
+    author: "李大钊",
+    title: "《青春》",
+    publication: "《新青年》第二卷第一号",
+    year: "1916",
+    note: "页面为适应短句排版节选原文。",
+    url: "https://zh.wikisource.org/wiki/青春_(李大釗)",
+  },
+  {
+    id: "03",
+    author: "胡适",
+    title: "《文学改良刍议》",
+    publication: "《新青年》第二卷第五号",
+    year: "1917",
+    url: "https://zh.wikisource.org/zh-hans/文學改良芻議",
+  },
+  {
+    id: "04",
+    author: "鲁迅",
+    title: "《狂人日记》",
+    publication: "《新青年》第四卷第五号",
+    year: "1918",
+    url: "https://zh.wikisource.org/wiki/狂人日記",
+  },
+  {
+    id: "05",
+    title: "五四运动大事记",
+    publication: "中国共产党新闻网",
+    note: "用于5月4日、罢课、逮捕、上海三罢与官员离任等节点。不同史料对参加学校数量表述不一，正文采用“十余所学校”。",
+    url: "https://cpc.people.com.cn/GB/33837/2533581.html",
+  },
+  {
+    id: "06",
+    title: "外交史上的今天：5月4日",
+    publication: "中华人民共和国外交部",
+    note: "用于巴黎和会、山东问题、示威路线与拒签和约。",
+    url: "https://www.fmprc.gov.cn/web/ziliao_674904/historytoday_674971/200305/t20030504_9284558.shtml",
+  },
+  {
+    id: "07",
+    title: "北京大学校史：新文化运动中心与五四运动策源地",
+    publication: "北京大学",
+    note: "用于4月底山东问题、5月3日晚学生会议和次日行动。",
+    url: "https://www.pku.edu.cn/detail/905.html",
+  },
+  {
+    id: "08",
+    title: "中国共产党一百年大事记",
+    publication: "中华人民共和国司法部转载新华社资料",
+    note: "用于3000余名学生、6月5日上海工人罢工和6月28日拒签。",
+    url: "https://www.moj.gov.cn/pub/sfbgwapp/jryw/202106/t20210628_429089.html",
+  },
+];

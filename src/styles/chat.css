@@ -1,0 +1,60 @@
+.chat-history { position: relative; min-height: 100svh; overflow: hidden; background: var(--deep); }
+.chat-history::before { content: ""; position: absolute; inset: 0; background: url("../assets/paper-texture.svg"); opacity: .14; pointer-events: none; }
+.chat-stage { position: relative; width: 100%; height: 100svh; }
+.chat-message { position: absolute; top: 50%; width: min(42rem, 72vw); transform: translateY(-45%); }
+.chat-message--left { left: clamp(2rem, 10vw, 10rem); }
+.chat-message--right { right: clamp(3.5rem, 11vw, 11rem); }
+.chat-message__meta { display: flex; gap: 1rem; margin: 0 0 .8rem 5.8rem; color: var(--red); font: .75rem Georgia, serif; letter-spacing: .13em; }
+.chat-message__body { display: flex; align-items: flex-start; gap: 1.5rem; }
+.chat-message__copy { width: 100%; border-top: 1px solid rgba(240,238,231,.48); padding-top: .8rem; }
+.chat-message__copy header { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: .8rem; letter-spacing: .09em; }
+.chat-message__copy header strong { color: var(--paper); font-size: 1rem; font-weight: 400; }
+.chat-message blockquote { margin: clamp(1.3rem, 3vw, 2.4rem) 0; font-size: clamp(1.65rem, 3vw, 3.2rem); line-height: 1.55; letter-spacing: .06em; }
+.chat-message blockquote span { display: block; }
+.chat-message__copy footer { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: .7rem; letter-spacing: .06em; }
+.chat-message__ellipsis { position: absolute; margin-top: 1.6rem; color: var(--muted); font: 2rem Georgia, serif; letter-spacing: .25em; }
+
+.history-transition { position: absolute; inset: 0; }
+.transition-card, .transition-date { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; }
+.transition-card--april span { font: clamp(5rem, 15vw, 13rem)/1 Georgia, serif; }
+.transition-card--april small { margin-top: 1rem; color: var(--muted); font: .7rem Georgia, serif; letter-spacing: .45em; }
+.transition-card--paris { align-items: flex-start; width: min(34rem, 70vw); height: max-content; inset: 32% auto auto 15%; border: 1px solid rgba(240,238,231,.45); padding: 2rem; text-align: left; }
+.transition-card--paris .live-dot { width: .45rem; height: .45rem; border-radius: 50%; background: var(--red); }
+.transition-card--paris small { margin: .8rem 0 2.5rem; color: var(--muted); letter-spacing: .15em; }
+.transition-card--paris strong { font-size: clamp(1.6rem, 3.2vw, 3rem); font-weight: 400; }
+.transition-card--alert time { color: var(--red); font: 1rem/1.6 Georgia, serif; letter-spacing: .12em; }
+.transition-card--alert strong { margin: 1.4rem 0 .7rem; font-size: clamp(1.8rem, 4vw, 4rem); font-weight: 400; }
+.transition-card--alert > span { color: var(--muted); }
+.transition-card--alert p { max-width: 32rem; margin-top: 2rem; color: var(--paper-dark); font-size: 1rem; line-height: 1.8; }
+.transition-card--meeting { gap: .7rem; }
+.transition-card--meeting span, .transition-card--meeting strong { font-size: clamp(1.5rem, 3vw, 2.8rem); font-weight: 400; letter-spacing: .1em; }
+.transition-card--meeting i { color: var(--red); font-style: normal; }
+.transition-date { z-index: 2; }
+.transition-date > span { font: clamp(3.5rem, 10vw, 9rem)/.95 Georgia, serif; }
+.transition-date__month, .transition-date__day { display: inline-block; }
+.transition-date small { margin-top: 1rem; color: var(--muted); letter-spacing: .32em; }
+.transition-date strong { margin-top: 2rem; font-size: clamp(1.2rem, 2.5vw, 2.2rem); font-weight: 400; letter-spacing: .16em; }
+.transition-river { position: absolute; z-index: 1; bottom: -1px; left: -1vw; width: 102vw; height: 42vh; }
+.transition-river path { fill: var(--paper); }
+
+@media (max-width: 720px) {
+  .chat-message { top: 48%; width: calc(100vw - 4rem); }
+  .chat-message--left, .chat-message--right { left: 1.5rem; right: auto; }
+  .chat-message__meta { margin-left: 0; }
+  .chat-message__body { gap: .8rem; }
+  .media-fallback { width: 3.1rem; height: 3.9rem; }
+  .chat-message blockquote { font-size: clamp(1.45rem, 6vw, 2rem); }
+  .chat-message__copy header { flex-direction: column; gap: .3rem; }
+  .chat-message__copy footer { flex-direction: column; }
+  .transition-card--paris { left: 1.5rem; width: calc(100vw - 4rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-history { padding: 8rem 1.5rem 5rem; overflow: visible; }
+  .chat-stage { height: auto; }
+  .chat-message { position: relative; inset: auto; width: min(44rem, 100%); margin: 0 auto 7rem; opacity: 1 !important; visibility: visible !important; transform: none !important; }
+  .chat-message__ellipsis { display: none; }
+  .history-transition { position: relative; display: grid; gap: 7rem; }
+  .transition-card, .transition-date { position: relative; inset: auto; width: min(44rem, 100%); height: auto; margin: auto; opacity: 1 !important; visibility: visible !important; transform: none !important; }
+  .transition-river { display: none; }
+}
